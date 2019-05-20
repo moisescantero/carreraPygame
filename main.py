@@ -27,11 +27,11 @@ class Game():#clase llamada Game()
             self.__screen.blit(self.runner, (x,240))#colocamos a corredor en las coordenadas dadas respecto de arriba a la izquierda
             pygame.display.flip()# función refrescar/renderizar pantalla, cogida directamente de la librería pygame
             
-            x += 3
-            if x >= 250:
-                hayGanador = True
+            x += 3#aumentamos x de pantalla de 3 en 3
+            if x >= 400:#si x es igual a 250, hayGanador pasará a true y saldremos del bucle while
+                hayGanador = True#asignamos variable a booleano true
                         
-        print("Tenemos un ganador.")
+        print("Tenemos un ganador.")#imprimimos 
         pygame.quit()#quitar pygame
         sys.exit()#salida de sistema (opcion muy bestia, no es bueno usarla)
     
